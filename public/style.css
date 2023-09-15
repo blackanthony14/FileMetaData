@@ -3,40 +3,129 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #222;
-  background-color: #ECF0F1;
+  color: #333;
+  background-color: #9A3B3B;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures full viewport height */
 }
 
 .container {
-  padding: 0;
-  margin-top: 40px;
+  padding: 20px; /* Reduce padding for responsiveness */
+  max-width: 600px; /* Set a maximum width for responsiveness */
+  width: 90%; /* Adjust width for smaller screens */
+  margin-top: 20px;
+  background-color: #C08261;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-  margin-top: 60px;
+.header {
+  margin-bottom: 20px;
 }
 
-a {
-  color: #2574A9;
+.header h2 {
+  font-size: 24px; /* Adjust font size for smaller screens */
+  color: #9A3B3B;
 }
 
-input {
-  display: block;
-  position: relative;
-  margin: 10px auto;
-}
-
-input#button {
-  width: 230px;
+.usage {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
+  border: 1px solid #ccc;
   padding: 20px;
-  width: 60%;
-  min-width: 400px;
+  width: 90%; /* Adjust width for smaller screens */
+  min-width: 300px; /* Adjust minimum width for smaller screens */
+  margin: 0 auto;
+  background-color: #E2C799;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view h4 {
+  font-size: 18px; /* Adjust font size for smaller screens */
+  color: #9A3B3B;
+}
+
+/* Style the file input and submit button */
+input[type="file"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #C08261;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #C08261;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-label:hover {
+  background-color: #9A3B3B;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #C08261;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #9A3B3B;
+}
+
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .usage {
+    font-size: 14px;
+  }
+
+  .view h4 {
+    font-size: 16px;
+  }
+
+  .upload-label,
+  input[type="submit"] {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }
